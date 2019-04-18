@@ -1,7 +1,7 @@
-<h1>{{ user$.name }}</h1>
+<h1 *ngIf="user$ && user$.name">{{ user$.name }}</h1>
 
 <ul>
-  <li><strong>Username:</strong> {{ user$.username }}</li>
-  <li><strong>Email:</strong> {{ user$.email }}</li>
-  <li><strong>Phone:</strong> {{ user$.phone }}</li>
+  <li *ngIf="user$ && user$.username"><strong>Username:</strong> {{ user$.username }}</li>
+  <li *ngIf="user$ && user$.email"><strong>Email:</strong> {{ user$.email }}</li>
+  <li *ngIf="user$ && user$.phone"><strong>Phone:</strong> {{ user$.phone }}</li>
 </ul>
